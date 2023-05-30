@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/CSS.CSS">
+
+</head>
+
+<body>
+
+
+
+  <div class="container">
+    <h1>Ejercicios JS</h1>
+    <section class="card-section">
+      <div class="card">
+        <div class="card-header">Calculadora de salario</div>
+        <div class="card-body">
+          <label for="horas">Horas trabajadas:</label>
+          <input type="text" id="horas" min="0">
+          <br>
+          <label for="tarifa">Tarifa por hora:</label>
+          <input type="text" id="tarifa" min="0">
+          <br>
+          <button onclick="calcularSalario()">Calcular</button>
+          <br>
+          <h3 id="resultado"></h3>
+        </div>
+        <div class="card-footer">1</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Calculadora de sueldo neto</div>
+        <div class="card-body">
+          <label for="sueldo">Sueldo:</label>
+          <input type="text" id="sueldo" min="0">
+          <br>
+          <button onclick="calcularSueldoNeto()">Calcular</button>
+          <br>
+          <h3 id="descuento"></h3>
+          <h3 id="sueldoNeto"></h3>
+        </div>
+        <div class="card-footer">2</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Calculadora de descuento</div>
+        <div class="card-body">
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" id="cantidad">
+          <br>
+          <button onclick="cantidadDescuento()">Calcular descuento</button>
+          <br>
+          <h3 id="resultado1"></h3>
+        </div>
+        <div class="card-footer">3</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Calculadora de segundos</div>
+        <div class="card-body">
+          <p>Ingrese los segundos:</p>
+          <input type="text" id="segundos">
+          <button onclick="calcularSegundos()">Leer</button>
+          <!--especifica una funcion de JavaScript al pulsar el boton-->
+          <P id="resultado3"></P>
+        </div>
+        <div class="card-footer">4</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Lectura de minutos</div>
+        <div class="card-body">
+          <form name="formulario1">
+            <label>Ingrese el tiempo en minutos:</label>
+            <input type="text" name="tiempoEnMinutos">
+            <button type="button" onclick="calcular()">Calcular</button>
+          </form>
+          <p id="r1"></p>
+        </div>
+        <div class="card-footer">5</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Calculadora de salario e impresion</div>
+        <div class="card-body">
+          <label for="horasTrabajadas">Horas trabajadas:</label>
+          <input type="number" id="horasTrabajadas" name="horasTrabajadas"><br><br>
+          <label for="tarifaDePago">Tarifa de pago:</label>
+          <input type="number" id="tarifaDePago" name="tarifaDePago"><br><br>
+          <button onclick="calcularSalario1()">Calcular salario</button><br><br>
+
+          <p id="salario"></p>
+          <br>
+        </div>
+        <div class="card-footer">6</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Factura</div>
+        <div class="card-body">
+          <label for="precioVenta">Precio de venta:</label>
+          <input type="number" id="precioVenta" name="precioVenta"><br><br>
+
+          <label for="canti">Cantidad:</label>
+          <input type="number" id="canti" name="canti"><br><br>
+
+          <label for="descuento3">Descuento:</label>
+          <input type="number" id="descuento3" name="descuento3"><br><br>
+
+          <button onclick="calcularFactura()">Calcular factura</button><br><br>
+
+          <p id="precioNeto"></p>
+          <p id="iva"></p>
+          <p id="descuentoAplicado"></p>
+          <p id="precioVentaMasIva"></p>
+          <br>
+          <div class="card-footer">7</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">Mensajeria</div>
+        <div class="card-body">
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" name="edad"><br><br>
+
+          <button onclick="mostrarMensaje()">Mostrar mensaje</button><br><br>
+
+          <p id="mensaje"></p>
+          <br>
+          <div class="card-footer">8</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <h1>Programación de televisión</h1>
+          <p>Ingresa la hora actual:</p>
+          <br>
+          <input type="text" id="hora"><br><br>
+          <button onclick="mostrarPrograma()">Mostrar programación</button>
+
+          <br>
+          <div id="programacion"></div>
+          <br>
+          <div class="card-footer">9</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <label for="lado1">Lado 1:</label>
+          <input type="number" id="lado1" name="lado1"><br><br>
+
+          <label for="lado2">Lado 2:</label>
+          <input type="number" id="lado2" name="lado2"><br><br>
+
+          <label for="lado3">Lado 3:</label>
+          <input type="number" id="lado3" name="lado3"><br><br>
+
+          <button onclick="determinarTriangulo()">Determinar triángulo</button><br><br>
+
+          <p id="resultado4"></p>
+          <br>
+          <div class="card-footer">10</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+
+          <br>
+          <div class="card-footer">11</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+
+          <br>
+          <div class="card-footer">12</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+
+          <br>
+          <div class="card-footer">13</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+
+          <br>
+          <div class="card-footer">14</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+
+          <br>
+          <div class="card-footer">15</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+
+          <br>
+          <div class="card-footer">16</div>
+        </div>
+      </div>
+
+
+
+
+    </section>
+  </div>
+
+
+
+
+  <script src="js/e1.js"></script>
+
+
+</body>
+
+</html>
